@@ -2,8 +2,7 @@
 # Írjon programot, amely egy szövegben megtalálja a leghosszabb palindrom részsztringet.
 # A szövegben a szóközöket ingorálja és a kis és nagy betűket se különböztesse meg.
 
-#olyat kellene írni ami levág 1-et jobbról, megnézi, és mindíg vág 1-et jobbról és mindíg megnézi
-#levág 1-et balról, majd megnézi, és mindíg 1-et vág le balról, és megnézi hogy a maradék polindrom e
+
 
 import string
 
