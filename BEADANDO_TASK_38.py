@@ -19,7 +19,7 @@ for i in range(mozi.shape[0]):
         mozi[i][j] = "X"
 
 
-print("Mit szeretnél csinálni?, gepeld be: helyfoglalas, kereses, torles, indextorles, nevmodositas indexkereses,  (0 = kilepes)")
+print("Mit szeretnél csinálni?, gepeld be: helyfoglalas, kereses, torles, indextorles, nevmodositas, indexkereses,  (0 = kilepes)")
 inp = input()
 
 
@@ -61,26 +61,26 @@ while True:
                     print(mozi)
 
             if inp == "kereses":
-                mg = input("Add meg a monogrammját annak a rákarcúnak: ")
+                mg = input("Add meg a monogrammját annak, akit keresel: ")
 
                 def kereso(mg,mozi):
                     for i in range(mozi.shape[0]):
                         for j in range(0,mozi.shape[1],2):
                             if mozi[i,j] == mg[0] and mozi[i,j+1] == mg[1]:
                                 return ("{}.sor, {}.oszlopban ul az a ember a".format(i+1,int((j/2)+1)))
-                    return ("Ilyen ember nem veszi igénybe a mozi szolgáltatásait")
+                    return ("Ilyen ember nem foglalt helyet!")
 
                 print(mozi)
                 print(kereso(mg,mozi))
 
             if inp =="torles":
-                mg = input("Add neg az emberke monogrammját, kit ki szeretnél törölni: ")
+                mg = input("Add meg a monogrammját annak, akit ki szeretnél törölni: ")
 
                 def torlo(mg,mozi):
                     for i in range(mozi.shape[0]):
                         for j in range(0,mozi.shape[1],2):
                             if mozi[i, j ] == mg[0] or mozi[i, j+1] == mg[1]:
-                                print("Van ilyen személy a moziban, óhejtja törölni? (y/n)" )
+                                print("Van ilyen személy a moziban, óhajtja törölni? (y/n)" )
                                 xx = input()
                                 if xx == "y":
                                     mozi[i , j ] = "X"
@@ -129,7 +129,7 @@ while True:
                 if ccc == "XX":
                     print("A hely üres")
                 else:
-                    print("{}.sorban, {}.oszlopban: {}, ül".format(n,int(k/2),ccc))
+                    print("{}.sorban, {}.oszlopban: {} ül".format(n+1,int(k/2)+1,ccc))
 
             if inp == "nevmodositas":
                 mg = input("Add meg a modositando monogrammjat: ")
