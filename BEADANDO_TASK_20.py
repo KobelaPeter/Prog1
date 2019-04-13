@@ -27,9 +27,9 @@ for i in str:
 str = "".join(ls)
 
 
-#polindromkereső függvény
+#palindromkereső függvény
 
-def polindromok(str):
+def palindromok(str):
     lista = []
 
     for i in range(len(str)):
@@ -40,7 +40,7 @@ def polindromok(str):
                 lista.append(xx)
     return lista
 
-lista = (polindromok(str))
+lista = (palindromok(str))
 print(lista)
 
 #megnézi melyik a leghosszabb elem a listában
