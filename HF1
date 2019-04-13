@@ -1,0 +1,44 @@
+# Legalább három receptet kellene szótár segítségével tárolni
+# úgy, hogy az étel neve legyen a kulcs a szótárban, a hozzávalók
+# pedig az értékek a szükséges mennyiségükkel együtt. Továbbá kellene
+# hozzá még két függvény az egyik azt csinálja, hogy megkapja az étel
+# nevét és azt, hogy hány főre szeretnénk azt elkészíteni. Ezután kiírja a
+# recept hozzávalóit és azt, hogy azokból mennyi kell ahhoz, hogy elég legyen x főre.
+# A másik függvény pedig azt csinálja, hogyha megadunk neki egy receptet,
+# akkor azt ki tudja egészíteni új hozzávalóval és annak mennyiségével (az eredeti szótárt módosítsa).
+# Ha a megoldásához több függvényre van szükségetek az nem baj.
+
+
+dict = {"Vajaskenyér":{"vaj":1,"kenyér":2},"Rantotthus":{"liszt" : 1,  "tojas" : 3,"zsemlemorzsa":3,"olaj":2}, "Étel":{"valami" : 1, "valamimas" : 2}}
+
+print(dict)
+
+def hanyfore(dict,recept, l = 1):
+    for i in dict:
+        if i == recept:
+            for j in dict[i]:
+                dict[i][j] = dict[i][j]*l
+    return dict
+
+
+asd = input("Írd be az egyik ételt!: ")
+szam = int(input('Írd be hány főre szeretnéd!: '))
+
+hanyfore(dict,asd,szam)
+print(dict[asd])
+
+
+def hozzaadas(dict,recept,uj_hozzavalo,uj_hozzavalo_osszege):
+    for i in dict:
+        if i == recept:
+            dict[i][uj_hozzavalo] = uj_hozzavalo_osszege
+    return dict
+
+asd2 = input("Add meg az étel nevét, amihez szeretnél hozzáadni valamit!: ")
+etel = input("Add meg hogy mivel szeretnéd bővíteni!: ")
+szam2 = int(input("Add meg mennyi kell ezen ételből!: "))
+
+
+hozzaadas(dict,asd2,etel,szam2)
+print(asd2, dict[asd2])
+
