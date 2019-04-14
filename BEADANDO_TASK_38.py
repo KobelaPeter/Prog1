@@ -36,7 +36,7 @@ while True:
 
                 k = k*2
 
-                if k > mozi.shape[1] or k < 0 or n > mozi.shape[0] or n < 0:
+                if k >= mozi.shape[1] or k < 0 or n >= mozi.shape[0] or n < 0:
                     print("Nincs ilyen szék, kérlek adj meg egy másikat! ")
                     continue
 
