@@ -39,4 +39,4 @@ while True:
 
 print(q)
 eltelt_ido = time.process_time() - t
-print(eltelt_ido)
+print("futasi ido:" ,eltelt_ido, "mp")
