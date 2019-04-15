@@ -4,11 +4,13 @@
 # lévő összes számmal. Az implementáció legyen ötletes és hatékony, közel valós időben
 # fusson le akár N=20-ra is.
 
-
+import time
 import numpy as np
 
 n = int(input("Adj meg egy szamot: "))
 ls = np.arange(1,n+1)
+
+t = time.process_time()
 
 if n == 0:
     print(0)
@@ -35,5 +37,6 @@ while True:
             break
     i += n
 
-
 print(q)
+eltelt_ido = time.process_time() - t
+print(eltelt_ido)
