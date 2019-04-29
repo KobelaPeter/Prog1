@@ -10,6 +10,17 @@
 # Töltsük fel a mozit úgy, hogy a fogadott vendégek között a monogramjuk megadásával
 # tudjunk keresni, módosítani és törölni foglalásokat.
 
+
+
+
+
+
+#A feladat szerintem hibás, mert ha 40x100-as mátrixot csinálok, azaz 40 sor lenne, és 100 oszlop,
+#ami azt jelentené, hogy 40 sorunk lenne, és azon belül 50 szék.
+#én a 100x40 es mátrixot választottam a feladatban megadott helyett, és így 20 széket kaptam 1 sorba.
+
+
+
 import numpy as np
 
 mozi = np.empty((100,40),np.str)
@@ -29,7 +40,7 @@ while True:
 
             if inp == "helyfoglalas":
                 n = int(input("add meg hanyadik sorban szeretnel ulni: "))
-                k = int(input("add meg hanyadik oszlopban szeretnel ulni: "))
+                k = int(input("add meg hanyadik szeken(oszlopban) szeretnel ulni: "))
                 mg = input("add meg a monogrammod: ")
                 n = n-1
                 k = k-1
@@ -67,7 +78,7 @@ while True:
                     for i in range(mozi.shape[0]):
                         for j in range(0,mozi.shape[1],2):
                             if mozi[i,j] == mg[0] and mozi[i,j+1] == mg[1]:
-                                return ("{}.sor, {}.oszlopban ul az a ember a".format(i+1,int((j/2)+1)))
+                                return ("{}.sor, {}.széken ül a keresett személy".format(i+1,int((j/2)+1)))
                     return ("Ilyen ember nem foglalt helyet!")
 
                 print(mozi)
@@ -95,7 +106,7 @@ while True:
 
             if inp == "indextorles":
                 n = int(input("Add meg melyik sorból toroljek: "))
-                k = int(input("Add meg melyik oszlopból töröljek: "))
+                k = int(input("Add meg melyik oszlopból(széket) töröljek: "))
                 k = k-1
                 n = n-1
 
@@ -118,7 +129,7 @@ while True:
 
             if inp == "indexkereses":
                 n = int(input("Add meg melyik sorból keressek: "))
-                k = int(input("Add meg melyik oszlopból keressek: "))
+                k = int(input("Add meg melyik oszlopból(széket) keressek: "))
                 n = n-1
                 k = k-1
                 k = k * 2
@@ -129,7 +140,7 @@ while True:
                 if ccc == "XX":
                     print("A hely üres")
                 else:
-                    print("{}.sorban, {}.oszlopban: {} ül".format(n+1,int(k/2)+1,ccc))
+                    print("{}.sorban, {}.széken(oszlopban): {} ül".format(n+1,int(k/2)+1,ccc))
 
             if inp == "nevmodositas":
                 mg = input("Add meg a modositando monogrammjat: ")
