@@ -3,15 +3,20 @@
 # A szövegben a szóközöket ingorálja és a kis és nagy betűket se különböztesse meg.
 
 
+#palindrom:
+#(a szűkebb, eredeti értelemben) olyan szó vagy szókapcsolat, amely visszafelé olvasva is ugyanaz.
+#egy betűt nem tekintek palindromnak
+
 
 import string
 
 
-str = input("Add meg a stringet!")
+str1 = input("Add meg a stringet!")
+
 #takarító részleg
 
 ls =[]
-for i in str:
+for i in str1:
     if i.islower():
         ls.append(i)
     elif i.isupper():
@@ -27,25 +32,25 @@ for i in str:
 str = "".join(ls)
 
 
-#palindromkereső függvény
+#palindromkereső
 
-def palindromok(str):
-    lista = []
 
-    for i in range(len(str)):
-        for j in range(0,i):
-            xx = str[j:i +1]
+lista = []
 
-            if xx == xx[::-1]:
-                lista.append(xx)
-    return lista
+for i in range(len(str)):
+    for j in range(0,i):
+        szo = str[j:i+1]
+        szo2 = szo[::-1]
 
-lista = (palindromok(str))
-print(lista)
+        if szo == szo2:
+            lista.append(szo)
+
+#print(lista)
 
 #megnézi melyik a leghosszabb elem a listában
+
+xx = ''
 db = 0
-xx = ""
 
 for i in range(len(lista)):
     if int(len(lista[i])) > db:
@@ -53,6 +58,7 @@ for i in range(len(lista)):
         xx = lista[i]
 
 print(xx)
+
 
 
 
