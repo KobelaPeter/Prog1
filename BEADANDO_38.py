@@ -12,15 +12,12 @@
 
 
 
-
-
-
 #A feladat szerintem hibás, mert ha 40x100-as mátrixot csinálok, azaz 40 sor lenne, és 100 oszlop,
 #ami azt jelentené, hogy 40 sorunk lenne, és azon belül 50 szék.
 #én a 100x40 es mátrixot választottam a feladatban megadott helyett, és így 20 széket kaptam 1 sorba.
 
 
-
+import string
 import numpy as np
 
 mozi = np.empty((100,40),np.str)
@@ -162,8 +159,19 @@ while True:
             print("Mit szeretnél csinálni?, gepeld be: helyfoglalas, kereses, torles, indextorles, indexkereses, nevmodositas (0 = kilepes)")
             inp = input()
 
-        print(mozi)
+        zz = mozi
         break
 
     except:
         print("A megadott dolog nem szám!")
+
+
+print(zz)
+
+
+for i in range(zz.shape[0]):
+    ls = []
+    for j in range(zz.shape[1]):
+        ls.append(zz[i,j])
+        asd = "".join(ls)
+    print(asd)
