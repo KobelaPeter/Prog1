@@ -168,6 +168,7 @@ while True:
 
 print(zz)
 
+# másik kiírással
 
 for i in range(zz.shape[0]):
     ls = []
