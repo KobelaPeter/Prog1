@@ -166,8 +166,6 @@ while True:
         print("A megadott dolog nem szám!")
 
 
-print(zz)
-
 # másik kiírással
 
 for i in range(zz.shape[0]):
@@ -176,3 +174,6 @@ for i in range(zz.shape[0]):
         ls.append(zz[i,j])
         asd = "".join(ls)
     print(asd)
+
+    
+print(zz)
