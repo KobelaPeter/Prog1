@@ -1,0 +1,20 @@
+
+
+lista = [1,2,3,4,5,6,7,8,9]
+
+print("gyökvonás, páros, művelet")
+x = input()
+
+
+def fuggveny(lista,x):
+    if x == "gyökvonás":
+        zz = lambda n: n**(1/2)
+        print(list(map(zz,lista)))
+    elif x == "páros":
+        zz = lambda n: True if n%2 == 0 else False
+        print(list(filter(zz,lista)))
+    elif x == "művelet":
+        zz = lambda x: x**3 - 2*x**2 + x + 11
+        print(list(map(zz,lista)))
+
+fuggveny(lista,x)
