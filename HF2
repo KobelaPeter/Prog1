@@ -1,0 +1,23 @@
+
+
+A = set([1,3,4,5,7,8,9,10,11,13])
+B = set([1,6,21,32,2,3,4,6,8,12,11])
+
+
+print("unió,metszet,különség A és B halmazba, (formátum pl.: A unió B)")
+str = input()
+
+
+def fuggveny(str,A,B):
+    if str == "A unió B" or str == "B unió A":
+        return A.union(B)
+    elif str == "A metszet B" or str == "B metszet A":
+        return A&B
+    elif str == "A különbség B":
+        return A-B
+    elif str == "B különbség A":
+        return B-A
+    else:
+        return "Érvénytelen halmaznűvelet"
+
+print(fuggveny(str,A,B))
