@@ -10,7 +10,7 @@ import numpy as np
 n = int(input("Adj meg egy szamot: "))
 ls = np.arange(1,n+1)
 
-#t = time.process_time()
+# t = time.process_time()
 
 if n == 0:
     print(0)
@@ -21,10 +21,11 @@ else:
     a = n//2+1
 
 lista = ls[-a:]
+lista = lista[0:len(lista)-1:]
 print(lista)
 
 q = 0
-i = n
+i = n  
 
 while True:
     z = 0
@@ -39,5 +40,6 @@ while True:
     i += n
 
 print(q)
-#eltelt_ido = time.process_time() - t
-#print("futasi ido:" ,eltelt_ido, "mp")
+# eltelt_ido = time.process_time() - t
+# print("futasi ido:" ,eltelt_ido, "mp")
+
