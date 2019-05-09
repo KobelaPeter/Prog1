@@ -44,11 +44,3 @@ for i in range(len(lista)):
         xx = lista[i]
 
 print(xx)
-
-
-
-
-
-
-
-
