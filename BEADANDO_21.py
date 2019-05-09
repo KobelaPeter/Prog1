@@ -22,8 +22,10 @@ else:
 
 lista = ls[-a:]
 print(lista)
+
 q = 0
 i = n
+
 while True:
     z = 0
     for j in lista:
