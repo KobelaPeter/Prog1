@@ -12,10 +12,6 @@
 
 
 
-#A feladat szerintem hibás, mert ha 40x100-as mátrixot csinálok, azaz 40 sor lenne, és 100 oszlop,
-#ami azt jelentené, hogy 40 sorunk lenne, és azon belül 50 szék.
-#én a 100x40 es mátrixot választottam a feladatban megadott helyett, és így 20 széket kaptam 1 sorba.
-
 
 import string
 import numpy as np
@@ -165,8 +161,6 @@ while True:
     except:
         print("A megadott dolog nem szám!")
 
-
-# másik kiírással
 
 for i in range(zz.shape[0]):
     ls = []
