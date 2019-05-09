@@ -3,17 +3,12 @@
 # A szövegben a szóközöket ingorálja és a kis és nagy betűket se különböztesse meg.
 
 
-#palindrom:
-#(a szűkebb, eredeti értelemben) olyan szó vagy szókapcsolat, amely visszafelé olvasva is ugyanaz.
-#egy betűt nem tekintek palindromnak
-
 
 import string
 
 
 str1 = input("Add meg a stringet!")
 
-#takarító részleg
 
 ls =[]
 for i in str1:
@@ -32,9 +27,6 @@ for i in str1:
 str = "".join(ls)
 
 
-#palindromkereső
-
-
 lista = []
 
 for i in range(len(str)):
@@ -47,7 +39,6 @@ for i in range(len(str)):
 
 #print(lista)
 
-#megnézi melyik a leghosszabb elem a listában
 
 xx = ''
 db = 0
