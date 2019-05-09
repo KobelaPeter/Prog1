@@ -24,7 +24,10 @@ for i in range(len(str)):
         szo = str[j:i+1]
         szo2 = szo[::-1]
 
-        if szo.capitalize() == szo2.capitalize():
+        nagyszo = szo.upper()
+        nagyszo2 = szo2.upper()
+
+        if nagyszo == nagyszo2:
             lista.append(szo)
 
 #print(lista)
@@ -39,4 +42,4 @@ for i in range(len(lista)):
 
 print(xx)
 
-# lghajkfsjagfhsamfkjashfjsabfuoafusaGA     GASG   g ajlbgjashgsajh326178637fsadfnsajhdsaj  lasfnsa a Bb B2AcCa2B bb a fjabjkfsba7362713621
+# lghajkfsjagfhsamfkjashfjsabfuoafusaGA     GASG   g ajlbgjashgsajhfsadfnsajhdsaj  lasfnsa a Bb BAcCaB bb a fjabjkfsba
