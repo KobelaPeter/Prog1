@@ -23,7 +23,7 @@ else:
 lista = ls[-a:]
 print(lista)
 q = 0
-i = 0
+i = n
 while True:
     z = 0
     for j in lista:
@@ -33,8 +33,7 @@ while True:
             z +=1
     if z == len(lista):
         q = i
-        if q != 0:
-            break
+        break
     i += n
 
 print(q)
