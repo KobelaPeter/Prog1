@@ -12,12 +12,7 @@ str1 = input("Add meg a stringet!")
 
 ls =[]
 for i in str1:
-    if i.islower():
-        ls.append(i)
-    elif i.isupper():
-        u = i.lower()
-        ls.append(u)
-    elif i in string.punctuation:
+    if i in string.punctuation:
         continue
     elif i == " ":
         continue
@@ -34,7 +29,7 @@ for i in range(len(str)):
         szo = str[j:i+1]
         szo2 = szo[::-1]
 
-        if szo == szo2:
+        if szo.capitalize() == szo2.capitalize():
             lista.append(szo)
 
 #print(lista)
@@ -49,6 +44,7 @@ for i in range(len(lista)):
         xx = lista[i]
 
 print(xx)
+
 
 
 
