@@ -2,25 +2,20 @@
 # Írjon programot, amely egy szövegben megtalálja a leghosszabb palindrom részsztringet.
 # A szövegben a szóközöket ingorálja és a kis és nagy betűket se különböztesse meg.
 
-
-
 import string
-
 
 str1 = input("Add meg a stringet!")
 
-
 ls =[]
 for i in str1:
-    if i in string.punctuation:
+    if i == " ":
         continue
-    elif i == " ":
-        continue
+    # elif i in string.punctuation:
+    #     continue
     else:
         ls.append(i)
 
 str = "".join(ls)
-
 
 lista = []
 
@@ -34,7 +29,6 @@ for i in range(len(str)):
 
 #print(lista)
 
-
 xx = ''
 db = 0
 
@@ -44,3 +38,5 @@ for i in range(len(lista)):
         xx = lista[i]
 
 print(xx)
+
+# lghajkfsjagfhsamfkjashfjsabfuoafusaGA     GASG   g ajlbgjashgsajhfsadfnsajhdsaj  lasfnsa a Bb BAcCaB bb a fjabjkfsba
