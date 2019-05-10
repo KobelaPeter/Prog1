@@ -42,4 +42,4 @@ for i in range(len(lista)):
 
 print(xx)
 
-# lghajkfsjagfhsamfkjashfjsabfuoafusaGA     GASG   g ajlbgjashgsajhfsadfnsajhdsaj  lasfnsa a Bb BAcCaB bb a fjabjkfsba
+# lghajkfsjagfhsamfkjashfjsabfuoafusaGA     GASG   g ajlbgjashgsajhfsadfnsajhdsaj  lasfnsa aBb BAcCaB bb a fjabjkfsba
